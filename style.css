@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stHeading  a{
+    display: none;
+}
+
+
+div[data-testid="stMainBlockContainer"] {
+    padding-top: 2.5rem;
+}
+
+#calculadora-de-taxa-judiciaria-tjsp{
+    font-family: "Archivo Narrow", sans-serif;
+}
+
+div[data-testid="stTextInput"] {
+    margin-top: 1.5rem;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    text-align: center;
+    border-top: 0.2rem solid rgb(13, 142, 90);
+}
+
+div[data-testid="stMainBlockContainer"] {
+    height: 100%;
+}
+
+.footer  a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
