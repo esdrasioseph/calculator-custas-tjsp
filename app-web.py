@@ -29,19 +29,20 @@ if st.button('Calcular Custas', type='primary') or input_text:
         if (n1<= 0):
             st.error('Valor númerico inválido. Por favor, digite um número positivo maior que 0')
 
-        valor = n1 * 0.015
-
-        if valor <= 192.10:
-            resultado_texto = "R$ 192,10 (Piso Mínimo)"
-        elif valor > 115260:
-            resultado_texto = "R$ 115.260,00 (Teto Máximo)"
         else:
-            resultado_texto = format_currency(valor,'BRL', locale='pt_BR')
+            valor = n1 * 0.015
 
-        with st.spinner('Calculando...'):
-            time.sleep(1)
+            if valor <= 192.10:
+                resultado_texto = "R$ 192,10 (Piso Mínimo)"
+            elif valor > 115260:
+                resultado_texto = "R$ 115.260,00 (Teto Máximo)"
+            else:
+                resultado_texto = format_currency(valor,'BRL', locale='pt_BR')
 
-        st.success(f'O valor das custas iniciais é de {resultado_texto}.')
+            with st.spinner('Calculando...'):
+                time.sleep(1)
+
+            st.success(f'O valor das custas iniciais é de {resultado_texto}.')
 
     except ValueError:
         st.error('Por favor, digite um valor númerico válido (Ex.: 50.000,00 ou 50000)')
