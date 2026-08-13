@@ -26,12 +26,13 @@ if st.button('Calcular Custas', type='primary') or input_text:
             .replace('reais', '')
             .strip())
 
+        if (n1<= 0):
+            st.error('Valor númerico inválido. Por favor, digite um número positivo maior que 0')
+
         valor = n1 * 0.015
 
         if valor <= 192.10:
             resultado_texto = "R$ 192,10 (Piso Mínimo)"
-            if valor <= 0:
-                resultado_texto = "valor númerico inválido. Por favor, digite um número positivo maior que 0"
         elif valor > 115260:
             resultado_texto = "R$ 115.260,00 (Teto Máximo)"
         else:
@@ -47,7 +48,7 @@ if st.button('Calcular Custas', type='primary') or input_text:
 
 st.markdown("""
 <div class="footer">
-    Desenvolvido por <a href="https://github.com/esdrasioseph" tagert="_blank">@esdrasioseph</a>
+    Desenvolvido por <a href="https://github.com/esdrasioseph" target="_blank">@esdrasioseph</a>
 </div>
 """
 ,unsafe_allow_html= True)
